@@ -1,0 +1,42 @@
+//Write a java program to accept 5 no from user and find out the greatest.
+
+import java.util.*;
+public class greaterno
+{
+  public static void main(String args[])
+  {
+     int num1,num2,num3,num4,num5;
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter Numbers:");
+     num1=sc.nextInt();
+     num2=sc.nextInt();
+     num3=sc.nextInt();
+     num4=sc.nextInt();
+     num5=sc.nextInt();
+        if(num1>num2 && num1>num3 && num1>num4 && num1>num5)
+           {
+              System.out.println("The First Number Is Greater");              
+           }
+        else if(num2>num1 && num2>num3 && num2>num4 && num2>num5)
+          {
+             System.out.println("The Second Number Is Greater");
+          }
+        else if(num3>num1 && num3>num2 && num3>num4 && num3>num5)
+        {
+           System.out.println("The Third Number Is Greater");
+        }
+        else if(num4>num1 && num4>num2 && num4>num3 && num4>num5)
+        {
+           System.out.println("The Fourth Number Is Greater");
+        }
+        else if(num5>num1 && num5>num2 && num5>num3 && num5>num4)
+        {
+           System.out.println("The Fifth Number Is Greater");
+        }
+        else
+         {
+            System.out.println("Enter Different number");
+         }
+ }
+
+}
