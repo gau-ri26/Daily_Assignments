@@ -1,0 +1,48 @@
+//Write a java program to accept character from user and check it is vowel or not
+
+import java.util.*;
+public class vowel
+{    
+	public static void main(String[] args) 
+	{    
+		char ch;
+		System.out.println("Enter character");
+    	Scanner sc = new Scanner(System.in);  
+    	ch=sc.next().charAt(0);
+		switch(ch)  
+		{  
+		case 'a':   
+            System.out.println("The given character is Vowel");  
+            break;  
+        case 'e':   
+            System.out.println("The given character is Vowel"); 
+            break;  
+        case 'i':   
+            System.out.println("The given character is Vowel");  
+            break;  
+        case 'o':   
+            System.out.println("The given character is Vowel");  
+            break;  
+        case 'u':   
+            System.out.println("Vowel");  
+            break;  
+        case 'A':   
+            System.out.println("The given character is Vowel");  
+            break;  
+        case 'E':   
+            System.out.println("The given character is Vowel");  
+            break;  
+        case 'I':   
+            System.out.println("The given character is Vowel");  
+            break;  
+        case 'O':   
+            System.out.println("The given character is Vowel");  
+            break;  
+        case 'U':   
+            System.out.println("The given character is Vowel");  
+            break;  
+        default:   
+            System.out.println("The given character is not vowel");  
+    }  
+}    
+}  
