@@ -1,0 +1,240 @@
+/*WAP to Accept a no from the user and perform the following task
+1:Logical Operator
+2: Arithmetic Operation
+3: Reverse of the No
+4: swapping of two no with third variable
+5:Swapping without third variable
+6:Accept the value find out the factorial and pass the value of factorial to another function 7
+7:Find out the sm of digit
+*/
+
+
+
+import java.util.*;
+
+public class FUNCTIONS
+{
+	public static void main(String[] args)
+    {
+		Logical_operators(); //calling the logical_operators function
+		arithmetic_operators(); //calling the arithmetic_operators function
+		reversenumber();  //calling the reversenumber function
+		swapping1();	//calling the swapping1 function
+		swap_using_var();    //calling the swap_using_var() function
+		factorial(); 		//calling the factorial() function
+		fact_sumdigit();	//calling the fact_sumdigit() function
+		SumOfDigits();
+	}
+
+	//calling the logical_operators function
+	public static void Logical_operators()
+	{
+		int a=1,b=2,choice;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("1. Logical AND"
+				+ "2. Logical OR"
+				+ "3. Logical Not");
+		choice=sc.nextInt();
+		switch (choice) {
+		case 1:
+			//Logical AND
+			System.out.println("True && False = " + ((a>b) && (a<b)));
+			break;
+		case 2:
+			//Logical OR
+			System.out.println("True || False = " + ((a>b) | (a<b)) );
+			break;
+		case 3:
+			//Logical Not
+			System.out.println("!(True && False) = " + !((a>b) && (a<b)));
+			break;
+
+		default:
+			System.out.println("Enter Valid Option");
+			break;
+		}
+	}
+	
+	
+	//calling the arithmetic_operators function
+	public static void arithmetic_operators()
+	{
+		int a,b,choice,r;
+		System.out.println("Enter the Numbers a and b : ");
+		Scanner sc = new Scanner(System.in);
+		a=sc.nextInt();
+		b=sc.nextInt();
+		System.out.println("1: Add\n"
+				+ "2: Subtract\n"
+				+ "3: Multiply\n"
+				+ "4: Divide\n"
+				+ "5: Remainder\n");
+		choice=sc.nextInt();
+		switch (choice)
+		{
+		case 1:
+			int sum;
+			sum=a+b;
+			System.out.println("Addition is "+sum);
+			break;
+		case 2:
+			int sub;
+			sub=a-b;
+			System.out.println("Subtraction is "+sub);
+			
+			break;
+		case 3:
+			int mult;
+			mult=a*b;
+			System.out.println("Multiplication is "+mult);
+			
+			break;
+		case 4:
+			int div;
+			div=a/b;
+			System.out.println("Division is "+div);
+			
+			break;
+		case 5:
+			int rem;
+			rem=a%b;
+			System.out.println("Remainder is "+rem);
+			
+			break;
+
+		default:
+			System.out.println("Enter Valid Option");
+			break;
+		}
+	}
+	
+	//calling the arithmetic_operators function
+		public static int reversenumber()
+		{
+			int a = 0,b = 0,c = 0,r;
+			int num= a+b+c,r1,rev=1; // for multiplication operation we initialize 1  
+			
+			if(num<=0)
+			{
+				System.out.println(" number = "+num);
+				r1=num%10;  //remainder
+				num=num/10;
+				rev=rev*10+r1; // reverse 
+			}
+			return rev;
+		}
+		
+		//calling the swapping function
+				public static void swapping1()
+				{
+					int a, b, temp;   
+				    Scanner sc = new Scanner(System.in);  
+				    System.out.println("Enter the value of a and b");  
+				    a = sc.nextInt();  
+				    b = sc.nextInt();  
+				    System.out.println("Before swapping numbers: a="+a +" b="+ b);  
+				    /*swapping */  
+				    temp = a;  
+				    a = b;  
+				    b = temp;  
+				    System.out.println("After swapping: a="+a +" b=" + b);
+				}
+				
+				
+		//calling the swap_using_var() function
+	    public static void swap_using_var()
+	    {
+	    	 int x, y, t;// x and y are to swap   
+	         Scanner sc = new Scanner(System.in);  
+	         System.out.println("Enter the value of X and Y");  
+	         x = sc.nextInt();  
+	         y = sc.nextInt();  
+	         System.out.println("Before swapping numbers: "+x +"  "+ y);  
+	         /*swapping */  
+	         t = x;  
+	         x = y;  
+	         y = t;  
+	         System.out.println("After swapping: "+x +"   " + y);  
+	         System.out.println( );  
+	    }
+	    
+	  //calling the factorial() function
+	    public static int factorial()
+	    {
+	    int i,factorial=1,num;
+		System.out.println("Enter the Number :");
+		Scanner sc = new Scanner(System.in);
+		num=sc.nextInt();
+		//using for loop to find factorial of number
+		for(i=1;i<=num;i++) {
+			factorial=factorial*i;
+		}
+		System.out.println("Factorial of "+num+" is: "+factorial);
+		return factorial;
+	    }
+	    
+	    //calling fact_sumdigit()
+	    public static void fact_sumdigit() 
+	    {
+			int fact, digit, sum = 0;
+			fact=fact();
+//			Scanner sc = new Scanner(System.in);  
+//			System.out.print("Enter the number: ");  
+//			fact = sc.nextInt();
+			//using while loop to find sum of digits of number
+			while(fact > 0)  
+			{  
+			//finds the last digit of the given number    
+			digit = fact % 10;  
+			//adds last digit to the variable sum  
+			sum = sum + digit;  
+			//removes the last digit from the number  
+			fact = fact / 10;  
+			}  
+			//prints the result  
+			System.out.println("Sum of Digits: "+sum);
+		}
+		private static int fact()
+		{
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		public static void factsumdigit() {
+			int fact, digit, sum = 0;
+			fact=fact();
+//			Scanner sc = new Scanner(System.in);  
+//			System.out.print("Enter the number: ");  
+//			fact = sc.nextInt();
+			//using while loop to find sum of digits of number
+			while(fact > 0)  
+			{  
+			//finds the last digit of the given number    
+			digit = fact % 10;  
+			//adds last digit to the variable sum  
+			sum = sum + digit;  
+			//removes the last digit from the number  
+			fact = fact / 10;  
+			}  
+			//prints the result  
+			System.out.println("Sum of Digits: "+sum);
+		}
+		
+		public static void SumOfDigits()
+		{
+		long number, sum;  
+		Scanner sc=new Scanner(System.in);  
+		System.out.print("Enter a number: ");  
+		//reads a long number from the user  
+		number=sc.nextLong();  
+		//executes until the condition number!=0 becomes false  
+		for(sum=0; number!=0; number=number/10)  
+		{  
+		//finds the last digit and add it to the variable sum      
+		sum = sum + number % 10;  
+		}  
+		//prints the result  
+		System.out.println("Sum of digits: "+sum);  
+		}  
+		  
+}
