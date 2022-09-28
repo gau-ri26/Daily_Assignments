@@ -4,10 +4,10 @@ public class PatternsProgram
 {
 	public static void main(String[] args)
     {
-		alphabeticpattern();////calling the alphabeticpattern function
-		trianglenumber();
-		binarynumber();
-		pyramidpattern();
+		alphabeticpattern();   //calling the alphabeticpattern function
+		trianglenumber();   //calling the trianglenumber function
+		binarynumber();   //calling the binarynumber function
+		pyramidpattern(); //calling the pyramidpattern function
     }
 	
 	//function to display alphabeticpatter
