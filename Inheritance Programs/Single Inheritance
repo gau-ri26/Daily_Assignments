@@ -1,0 +1,53 @@
+/*Write a program to create  two classes  1st class do the process of fibonacci series
+and in second class find out the greater between two no. from second class display both the operation.*/
+
+package inherit_demo;
+import java.util.Scanner;
+class fibonacci_series
+{
+	void fibonacci()
+	{
+		System.out.println("\nEnter the number upto which you want to find the fibonacci series : ");
+        Scanner sc=new Scanner(System.in);
+        int n;
+        n=sc.nextInt();
+        int a = 0, b = 1, c = 0;
+        //calculating the fibonacci series
+        System.out.println(a + " " + b + " ");
+        for (int i = 2; i < n; i++) 
+        {
+            c = a + b;
+            System.out.print(c + " ");
+            a = b;
+            b = c;
+        }
+	}
+}
+
+public class greater extends fibonacci_series
+{
+	 public void greater_num()
+	{
+	int n1, n2;
+	System.out.println("Enter the two numbers ");
+	Scanner sc =  new Scanner(System.in);
+	n1 = sc.nextInt();
+	n2 = sc.nextInt();
+
+	if (n1 > n2)
+	{
+		System.out.println(n1 + " is greter than " + n2);
+	}
+	else 
+	{
+		System.out.println(n2 + " is greter than " + n1);
+	}
+	}
+	public static void main(String[] args)
+	{
+		greater gr = new greater();
+	    gr.greater_num();
+	    gr.fibonacci();
+		
+	}
+}
