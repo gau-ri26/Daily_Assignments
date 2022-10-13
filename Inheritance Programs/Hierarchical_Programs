@@ -1,0 +1,97 @@
+/*WAP to accept from the user and perform the different types of operater. */
+
+package inherit_demo;
+import java.util.*;
+
+class Calling2
+{
+	static int n1, n2, n3;
+	public void Accept()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Three Numbers");
+		n1=sc.nextInt();
+		n2=sc.nextInt();
+		n3=sc.nextInt();
+	}
+
+}
+
+class arithmetic_operator extends Calling2
+{
+	public void arithmetic_op()
+	{
+	System.out.println("1: Addition = "+(n1 + n2));
+	System.out.println("2: Subtract = "+(n1 - n2));	
+	System.out.println("3: Multiply = "+(n1 * n2));
+	System.out.println("4: Divide = " + (n1 / n2));
+	System.out.println("5: Modulas= " + (n1 % n2));
+	
+	}
+}
+
+ class Ternary_op extends Calling2
+ {
+	 public void ternary_op()
+	 {
+				System.out.println("The logical operations for three number:\n");
+
+				if (n1 > n2 && n2 > n3)
+				{
+					System.out.println(n1 + " Is Greater Number");
+				} 
+				else if (n2 > n1 && n2 > n3)
+				{
+					System.out.println(n2 + " Is Greater Number");
+				} 
+				else 
+				{
+					System.out.println(n3 + " Is Greater Number");
+				}
+				{
+					System.out.println("");
+					if (n1 > n2 || n1 > n3 || n2 > n1 || n3 > n2)
+					{
+						System.out.println("If condition is true add a,b and c = " + (n1 + n2 + n3));
+					}
+
+					System.out.println("NOT Operator(!)"); // ! operator
+					System.out.println(!(n1 == n2));
+					System.out.println(!(n1 > n2));
+					System.out.println(!(n1 < n2));
+					System.out.println("");
+				}
+	 }
+ }
+ 
+ class Bitwise_op extends Calling2
+ {
+	 public void bitwise()
+	 {
+		 System.out.println("Bitwise operation for the given numbers\n");
+			System.out.println("Num1 & Num2 = " + (n1 & n2)); //// bitwise and
+			System.out.println("Num1 ^ Num2 = " + (n1 ^ n2)); //// bitwise XOR
+			System.out.println("Num1 | Num2 = " + (n1 | n2)); // bitwise inclusive OR
+			System.out.println("~Num1 = " + (~n1)); // bitwise compliment
+			System.out.println("");
+	 }
+ }
+ 
+ class Calling1
+ {
+
+		public static void main(String[] args) 
+		{
+			// TODO Auto-generated method stub
+			arithmetic_operator a_op = new arithmetic_operator();
+			a_op.Accept();
+			a_op.arithmetic_op();
+
+			Ternary_op t_op = new Ternary_op();
+			t_op.ternary_op();
+			
+			Bitwise_op b_op= new Bitwise_op();
+			b_op.bitwise();
+		}
+ }
+ 
