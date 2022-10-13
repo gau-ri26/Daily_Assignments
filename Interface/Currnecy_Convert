@@ -1,0 +1,89 @@
+/*WAP to convert the currency using interface*/
+
+package interface_demo;
+
+import java.util.Scanner;
+public interface Currency_con 
+{
+	public void demo();
+}
+
+package interface_demo;
+
+import java.util.Scanner;
+
+public class rupees implements Currency_con
+{
+	public static void main(String[] args)
+	{
+		rupees obj = new rupees();
+		obj.demo();
+	}
+	
+	@Override
+	public void demo()
+	{
+		// TODO Auto-generated method stub
+		double rs, dl;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Rupees:");
+		dl = sc.nextDouble();
+		rs= dl * 82.28;
+		System.out.println("Converted value of Rupees into Dollar= " +rs+" Rs");
+		
+	}
+}
+
+
+package interface_demo;
+import java.util.Scanner;
+
+public class pound implements Currency_con
+{
+	public static void main(String[] args)
+	{
+		pound obj1 = new pound();
+		obj1.demo();
+	}
+
+	@Override
+	public void demo() 
+	{
+		// TODO Auto-generated method stub
+		double rs, pd;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Rupees:");
+		pd = sc.nextDouble();
+		rs = pd * 91.89;
+		System.out.println("Converted value of Rupees to Pound= " +rs+" Rs");
+		
+	}
+	
+}
+
+
+package interface_demo;
+import java.util.*;
+public class Euro implements Currency_con
+
+{
+	public static void main(String[] args) 
+	{
+		Euro obj2 = new Euro();
+		obj2.demo();
+	}
+
+	@Override
+	public void demo() 
+	{
+		// TODO Auto-generated method stub
+		double rs, er;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Rupees:");
+		er = sc.nextDouble();
+		rs = er * 80.14;
+		System.out.println("Converted value of Rupees to Euro= " +rs+" Rs");
+		
+	}
+
+}
